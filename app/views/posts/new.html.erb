@@ -1,1 +1,35 @@
 <%= render "shared/header" %>
+<%= form_with model: @post, url: new_post_path, local: true do |f|%>
+
+  <%= render 'shared/error_messages', model: f.object %>
+
+  <div class="field">
+    <%= f.label :image, "投稿画像" %><span class="">※必須</span><br />
+    <%= f.file_field :image, id:"post_image" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title, "タイトル" %><span class="">※必須</span><br />
+    <%= f.text_field :title, id:"post_title" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :category, "カテゴリー" %><span class="">※必須</span><br />
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"", id:"post-category"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :junre, "ジャンル" %><span class="">※必須</span><br />
+    <%= f.collection_select(:junre_id, Junre.all, :id, :name, {}, {class:"", id:"post-junre"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :explanation, "説明" %><span class="">※必須</span><br />
+    <%= f.text_field :explanation, id:"post_explanation" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "投稿する", class: :form__btn  %>
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
+  </div>
+<% end %>
