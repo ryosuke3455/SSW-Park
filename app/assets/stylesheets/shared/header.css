@@ -9,6 +9,11 @@
   flex-direction: column;
   background-color: rgb(1, 0, 37);
 }
+.title {
+  font-size: 18px;
+  color: #ffffff;
+}
+  
 .search-bar-contents {
   display: flex;
   justify-content: space-between;
