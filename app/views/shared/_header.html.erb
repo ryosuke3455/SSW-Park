@@ -2,11 +2,11 @@
 <header class='header'>
   <div class='search-bar-contents'>
     <%= link_to 'SSWPark', root_path, class: 'title'%>
-    <%#= link to '詳細検索', "#" %>
+    <%= link_to '詳細検索', "#", class: 'detail-search' %>
     <form class="search-form" action="#">
       <input class='input-box' placeholder='キーワード検索'>
       <button class="search-button">
-        <%#= '検索', class:"search-icon" %>
+        <%= image_tag "search.png", class:"search-icon" %>
       </button>
     </form>
   </div>
