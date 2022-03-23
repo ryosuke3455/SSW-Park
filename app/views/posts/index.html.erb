@@ -11,16 +11,16 @@
 
       <% @posts.each do |post|%>
         <li class=''>
-          <%= link_to item_path(item.id) do %>
+          <%= link_to post_path(post.id) do %>
           <div class='post-img-content'>
             <%= image_tag post.image, class: "post-img" %>
           </div>
           <div class='post-info'>
             <h3 class='post-name'>
-              <%= post.name %>
+              <%#= post.name %>
             </h3>
             <div class='post-price'>
-              <span><%= item.title %></span>
+              <span><%= post.title %></span>
             </div>
           </div>
           <% end %>
