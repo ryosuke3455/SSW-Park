@@ -2,24 +2,24 @@
 <div class="main">
   <%= image_tag "IMG_2953.JPG", class: "main-post"%>
   <%# 投稿一覧 %>
-  <div class=''>
-    <h2 class=''>ピックアップカテゴリー</h2>
-    <div class="" >
-      新規投稿
+  <div class='post-contents'>
+    <h2 class='title'>ピックアップユーザー</h2>
+    <div class="subtitle" >
+      〜NEW POSTS〜
     </div>
-    <ul class=''>
+    <ul class='post-lists'>
 
       <% @posts.each do |post|%>
-        <li class=''>
+        <li class='lists'>
           <%= link_to post_path(post.id) do %>
           <div class='post-img-content'>
             <%= image_tag post.image, class: "post-img" %>
           </div>
           <div class='post-info'>
-            <h3 class='post-name'>
-              <%#= post.name %>
+            <h3 class='post-user-name'>
+              <%#= post.user.nickname %>
             </h3>
-            <div class='post-price'>
+            <div class='post-title'>
               <span><%= post.title %></span>
             </div>
           </div>

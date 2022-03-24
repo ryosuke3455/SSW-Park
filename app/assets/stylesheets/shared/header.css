@@ -7,7 +7,7 @@
   padding: 2vh 15vw;
   display: flex;
   flex-direction: column;
-  background-color: rgb(1, 0, 37);
+  background: linear-gradient(to right, rgb(1, 0, 37), rgb(255, 255, 255), rgb(1, 0, 37));
 }
 .title {
   font-size: 36px;
