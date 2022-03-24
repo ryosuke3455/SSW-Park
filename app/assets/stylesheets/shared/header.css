@@ -7,45 +7,46 @@
   padding: 2vh 15vw;
   display: flex;
   flex-direction: column;
-  background-color: skyblue;
+  background: linear-gradient(to right, rgb(1, 0, 37), rgb(255, 255, 255), rgb(1, 0, 37));
 }
-
+.title {
+  font-size: 36px;
+  color: #ffffff;
+  font-family: 'Caveat', cursive;
+  margin-right: 20px;
+}
+.detail-search {
+  font-size: 18px;
+  color: #ffffff;
+  margin-left: 40px;
+}
+  
 .search-bar-contents {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.furima-icon {
-  width: 10vw;
-  margin-right: 10vw;
-}
-
 .search-form {
-  width: 65vw;
+  width: 50vw;
   height: 5vh;
   display: flex;
   margin-bottom: 5px;
 }
-
 .search-form>.input-box {
-  width: 100%;
+  width: 55%;
   height: 5vh;
   padding-left: 10px;
 }
-
 .search-button {
   width: 5vh;
   border: 0;
   cursor: pointer;
-  background-color: #7cbdf1;
+  background-color: #428ce0;
   padding: 8px;
 }
-
 .search-icon {
   width: 100%;
 }
-
 .user {
   font-size: 18px;
   display: flex;
@@ -54,40 +55,36 @@
   width: 100%;
   padding: 1vh 0;
 }
-
 .lists-left {
   display: flex;
   min-width: 200px;
 }
-
 .lists {
   display: flex;
   list-style: none;
   align-items: flex-end;
 }
-
-
 .user-nickname {
   text-decoration: none;
   margin-right: 3vw;
-  color: #d8e6e7;
+  color: #ffffff;
   font-weight: bold;
+  font-family: 'Caveat', "Droid Sans Japanese", cursive;
 }
-
-
 .logout {
   text-decoration: none;
-  color: #333333;
+  color: #ffffff;
+  font-weight: bold;
 }
-
 .login {
   text-decoration: none;
   line-height: 32px;
   margin-right: 3vw;
-  color: #333333;
+  color: #ffffff;
+  font-weight: bold;
 }
-
 .sign-up {
   text-decoration: none;
-  color: #333333;
+  color: #ffffff;
+  font-weight: bold;
 }

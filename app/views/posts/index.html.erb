@@ -1,6 +1,38 @@
 <%= render "shared/header" %>
+<div class="main">
+  <%= image_tag "IMG_2953.JPG", class: "main-post"%>
+  <%# 投稿一覧 %>
+  <div class='post-contents'>
+    <h2 class='title'>ピックアップユーザー</h2>
+    <div class="subtitle" >
+      〜NEW POSTS〜
+    </div>
+    <ul class='post-lists'>
+
+      <% @posts.each do |post|%>
+        <li class='lists'>
+          <%= link_to post_path(post.id) do %>
+          <div class='post-img-content'>
+            <%= image_tag post.image, class: "post-img" %>
+          </div>
+          <div class='post-info'>
+            <h3 class='post-user-name'>
+              <%#= post.user.nickname %>
+            </h3>
+            <div class='post-title'>
+              <span><%= post.title %></span>
+            </div>
+          </div>
+          <% end %>
+        </li>
+      <% end%>
+    </ul>
+  </div>
+  <%# /投稿一覧 %>
+</div>
 <% if user_signed_in? %>
-  <%= link_to(new_post_path, class: 'purchase-btn') do %>
-    <span class='purchase-btn-text'>投稿する</span>
+  <%= link_to(new_post_path, class: 'post-btn') do %>
+    <span class='post-btn-text'>投稿する</span>
+    <%= image_tag 'icon_129690_256.png' , size: '90x50' ,class: "post-btn-icon" %>
   <% end %>
 <% end %>
