@@ -33,7 +33,7 @@
 # データベース設計
     https://gyazo.com/195ca559ade6ff8b0dc6cfe11dd84420
 # 画面遷移図
-    ![プレビュー](/SSW-Park.svg)
+![プレビュー](/SSW-Park.svg)
 # 開発環境
 
 # ローカルでの動作方法
